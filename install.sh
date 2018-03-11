@@ -7,7 +7,7 @@ source etc/source-highlight.sh
 source etc/zsh.sh
 if type "zsh" > /dev/null 2>&1
 then
-  source etc/zsh_prezto.sh
+  `which zsh` etc/zsh_prezto.sh
 fi
 source etc/npm-setting.sh
 

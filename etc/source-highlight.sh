@@ -1,5 +1,11 @@
 #!/bin/bash -eu
 
+echo -------------------------------------------------
+echo
+echo                    source-highlight
+echo
+echo -------------------------------------------------
+
 if ! type "source-highlight" > /dev/null 2>&1
 then
   if [ `get_os_name` == "mac" ]; then
