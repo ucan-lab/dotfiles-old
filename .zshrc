@@ -26,7 +26,7 @@ fi
 [[ -s "/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
 
 # less
-if [[ -x `which source-highlight` ]]; then
+if type "source-highlight" > /dev/null 2>&1; then
   export LESS='-R'
   export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 fi
@@ -35,5 +35,7 @@ fi
 export GREP_OPTIONS='--color=auto'
 
 # nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-export NODEBREW_ROOT=/usr/local/var/nodebrew
+if type "nodebrew" > /dev/null 2>&1; then
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
+  export NODEBREW_ROOT=/usr/local/var/nodebrew
+fi
