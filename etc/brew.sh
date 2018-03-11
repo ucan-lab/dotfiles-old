@@ -1,5 +1,11 @@
 #!/bin/bash -eu
 
+echo -------------------------------------------------
+echo
+echo                    homebrew
+echo
+echo -------------------------------------------------
+
 if [ `get_os_name` == "mac" ]; then
   if ! type "brew" > /dev/null 2>&1
   then

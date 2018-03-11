@@ -17,5 +17,6 @@ then
     cd /tmp/grc
     sudo ./install.sh
     rm -rf /tmp/grc
+    cd ~/dotfiles
   fi
 fi
