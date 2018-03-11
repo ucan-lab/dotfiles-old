@@ -25,8 +25,12 @@ fi
 # less
 if [[ -x `which source-highlight` ]]; then
   export LESS='-R'
-  export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh  %s'
+  export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 fi
 
 # grep
 export GREP_OPTIONS='--color=auto'
+
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export NODEBREW_ROOT=/usr/local/var/nodebrew

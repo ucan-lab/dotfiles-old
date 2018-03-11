@@ -2,7 +2,7 @@
 
 files=(.zlogin .zlogout .zpreztorc .zprofile .zshenv .zshrc)
 for file in $files; do
-  rm -f $file
+  rm -f ~/$file
 done
 
 if [ -d ~/.zprezto ]; then

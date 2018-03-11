@@ -1,9 +1,12 @@
-#!/bin/bash
+#!/bin/bash -eu
 
-if ! type "brew" > /dev/null 2>&1
+source etc/get_os.sh
+source etc/brew.sh
+source etc/source-highlight.sh
+source etc/zsh.sh
+if type "zsh" > /dev/null 2>&1
 then
-  echo "ERROR! Plese install homebrew."
-  exit
+  source etc/zsh_prezto.sh
 fi
 
 echo -------------------------------------------------

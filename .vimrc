@@ -1,5 +1,5 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible        " be iMproved, required
+filetype off          " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -15,8 +15,6 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-vividchalk'
 " Plugin 'Lokaltog/vim-powerline' " ステータス表示
 Plugin 'scrooloose/nerdcommenter' " , で コメントイン/コメントアウト
-Plugin 'css.vim'
-Plugin 'php.vim'
 Plugin 'L9'
 Plugin 'FuzzyFinder'
 Plugin 'tomtom/tcomment_vim' " https://qiita.com/alpaca_taichou/items/211cd62bee84c59ca480
@@ -32,8 +30,8 @@ Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'cocopon/iceberg.vim'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()      " required
+filetype plugin indent on  " required
 
 let NERDSpaceDelims = 1
 nmap ,, <Plug>NERDCommenterToggle
@@ -61,10 +59,10 @@ augroup END
 "filetype plugin on
 "
 " Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginList     - lists configured plugins
+" :PluginInstall  - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" :PluginClean    - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
@@ -110,12 +108,15 @@ set history=5000 " 保存するコマンド履歴の数
 
 " マウスの有効化
 if has('mouse')
-    set mouse=a
-    if has('mouse_sgr')
-        set ttymouse=sgr
-    elseif v:version > 703 || v:version is 703 && has('patch632')
-        set ttymouse=sgr
-    else
-        set ttymouse=xterm2
-    endif
+  set mouse=a
+  if has('mouse_sgr')
+    set ttymouse=sgr
+  elseif v:version > 703 || v:version is 703 && has('patch632')
+    set ttymouse=sgr
+  else
+    set ttymouse=xterm2
+  endif
 endif
+
+" 自動コピー
+set clipboard=unnamed,autoselect
