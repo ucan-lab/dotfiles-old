@@ -1,4 +1,4 @@
-# dotfiles mac only
+# dotfiles MacOS and CentOS only
 
 ```
 git clone https://github.com/ucan-lab/dotfiles.git ~/dotfiles
