@@ -27,3 +27,9 @@ do
 done
 
 source etc/vim.sh
+
+echo -------------------------------------------------
+echo
+echo                    Success Complete !!!
+echo
+echo -------------------------------------------------
