@@ -6,8 +6,7 @@ echo                    npm
 echo
 echo -------------------------------------------------
 
-if type "npm" > /dev/null 2>&1
-then
+if type "npm" > /dev/null 2>&1; then
   if [ ! -e ~/.npm-global ]; then
     mkdir ~/.npm-global
   fi

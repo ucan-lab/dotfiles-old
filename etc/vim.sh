@@ -6,8 +6,7 @@ echo                    vim
 echo
 echo -------------------------------------------------
 
-if ! type "vim" > /dev/null 2>&1
-then
+if ! type "vim" > /dev/null 2>&1; then
   if [ `get_os_name` == "mac" ]; then
     brew install vim
   elif [ `get_os_name` == "redhat" ]; then

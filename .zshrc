@@ -40,5 +40,4 @@ export GREP_OPTIONS='--color=auto'
 # nodebrew
 if type "nodebrew" > /dev/null 2>&1; then
   export PATH=$HOME/.nodebrew/current/bin:$PATH
-  export NODEBREW_ROOT=/usr/local/var/nodebrew
 fi
