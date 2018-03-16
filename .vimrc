@@ -18,6 +18,7 @@ Plugin 'scrooloose/nerdcommenter' " , で コメントイン/コメントアウ�
 Plugin 'L9'
 Plugin 'FuzzyFinder'
 Plugin 'tomtom/tcomment_vim' " https://qiita.com/alpaca_taichou/items/211cd62bee84c59ca480
+Plugin 'editorconfig/editorconfig-vim' " https://github.com/editorconfig/editorconfig-vim
 
 " https://github.com/plasticboy/vim-markdown
 " Plugin 'godlygeek/tabular'
