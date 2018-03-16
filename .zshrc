@@ -18,15 +18,11 @@ if [ -f ~/.zsh_aliases ]; then
   . ~/.zsh_aliases
 fi
 
-####################
-#     Colorize     #
-####################
-
 # theme
 prompt pure
 
 # read grc setting
-[[ -s "/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
+[[ -s "/usr/local/etc/grc.zsh" ]] && . /usr/local/etc/grc.zsh
 
 # less
 if type "source-highlight" > /dev/null 2>&1; then
@@ -34,10 +30,35 @@ if type "source-highlight" > /dev/null 2>&1; then
   export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 fi
 
-# grep
-export GREP_OPTIONS='--color=auto'
-
 # nodebrew
 if type "nodebrew" > /dev/null 2>&1; then
   export PATH=$HOME/.nodebrew/current/bin:$PATH
 fi
+
+##
+# alias
+#
+
+alias mkdir='mkdir -p'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+if [[ $(uname) == 'Darwin' ]]; then
+  alias ll='grc --colour=auto ls -lhGT'
+
+#  alias ll='ls  -lhGT'
+#  alias la='ls -alhGT'
+else
+  alias ll='ls  -lh --time-style=long-iso --color=auto'
+  alias la='ls -alh --time-style=long-iso --color=auto'
+fi
+
+# Laravel
+alias art='php artisan'
+alias serve='php artisan serve --host 0.0.0.0'
+alias fresh='php artisan migrate:fresh --seed'
+alias migrate='php artisan migrate'
+alias seed='php artisan db:seed'
+alias tinker='php artisan tinker'
+alias test='vendor/bin/phpunit --colors=always'

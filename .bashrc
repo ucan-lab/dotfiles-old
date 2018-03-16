@@ -14,8 +14,35 @@ if [[ -x `which source-highlight` ]]; then
   export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 fi
 
-export GREP_OPTIONS='--color=auto'
 export PATH=~/.npm-global/bin:$PATH
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-export NODEBREW_ROOT=/usr/local/var/nodebrew
+if type "nodebrew" > /dev/null 2>&1; then
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
+fi
+
+##
+# alias
+#
+
+alias ..='cd ..'
+alias mkdir='mkdir -p'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+if [[ $(uname) == 'Darwin' ]]; then
+  alias ll='ls  -lhGT'
+  alias la='ls -alhGT'
+else
+  alias ll='ls  -lh --time-style=long-iso --color=auto'
+  alias la='ls -alh --time-style=long-iso --color=auto'
+fi
+
+# Laravel
+alias art='php artisan'
+alias serve='php artisan serve --host 0.0.0.0'
+alias fresh='php artisan migrate:fresh --seed'
+alias migrate='php artisan migrate'
+alias seed='php artisan db:seed'
+alias tinker='php artisan tinker'
+alias test='vendor/bin/phpunit --colors=always'
