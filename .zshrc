@@ -45,10 +45,8 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 if [[ $(uname) == 'Darwin' ]]; then
-  alias ll='grc --colour=auto ls -lhGT'
-
-#  alias ll='ls  -lhGT'
-#  alias la='ls -alhGT'
+  alias ll='ls  -lhGT'
+  alias la='ls -alhGT'
 else
   alias ll='ls  -lh --time-style=long-iso --color=auto'
   alias la='ls -alh --time-style=long-iso --color=auto'
