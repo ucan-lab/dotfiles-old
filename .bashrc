@@ -6,8 +6,6 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
-[[ -s "/etc/grc.bashrc" ]] && source /etc/grc.bashrc
-
 # less
 if [[ -x `which source-highlight` ]]; then
   export LESS='-R'

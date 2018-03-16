@@ -21,9 +21,6 @@ fi
 # theme
 prompt pure
 
-# read grc setting
-[[ -s "/usr/local/etc/grc.zsh" ]] && . /usr/local/etc/grc.zsh
-
 # less
 if type "source-highlight" > /dev/null 2>&1; then
   export LESS='-R'
