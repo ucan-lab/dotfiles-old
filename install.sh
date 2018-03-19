@@ -1,5 +1,8 @@
 #!/bin/bash -eu
 
+# submodule
+git submodule update --init --recursive
+
 . etc/get_os.sh
 . etc/brew.sh
 . etc/grc.sh
