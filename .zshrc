@@ -35,7 +35,7 @@ if [ -e /usr/local/share/zsh-completions ]; then
 fi
 
 # knu/z
-git submodule update
+git submodule update --init
 . ~/dotfiles/z/z.sh
 
 ##
