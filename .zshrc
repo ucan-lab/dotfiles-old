@@ -29,6 +29,11 @@ if type "nodebrew" > /dev/null 2>&1; then
   export PATH=$HOME/.nodebrew/current/bin:$PATH
 fi
 
+# zsh-completions
+if [ -e /usr/local/share/zsh-completions ]; then
+  fpath=(/usr/local/share/zsh-completions $fpath)
+fi
+
 ##
 # alias
 #

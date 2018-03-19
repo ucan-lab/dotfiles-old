@@ -16,6 +16,8 @@ fi
 
 touch ~/.zshrc
 
+. etc/zsh_completions.sh
+
 if type "zsh" > /dev/null 2>&1; then
   `which zsh` etc/zsh_prezto.sh
 fi
