@@ -58,6 +58,11 @@ if type "micro" > /dev/null 2>&1; then
   alias mi='micro'
 fi
 
+# ccat
+if type "ccat" > /dev/null 2>&1; then
+  alias cat='ccat'
+fi
+
 # Laravel
 alias art='php artisan'
 alias serve='php artisan serve --host 0.0.0.0'
