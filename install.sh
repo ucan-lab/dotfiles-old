@@ -5,6 +5,7 @@
 . etc/grc.sh
 . etc/colordiff.sh
 . etc/source-highlight.sh
+. etc/micro.sh
 . etc/zsh.sh
 . etc/npm-setting.sh
 . etc/dotfiles.sh

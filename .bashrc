@@ -43,6 +43,11 @@ else
   alias diff='diff -u'
 fi
 
+# micro
+if type "micro" > /dev/null 2>&1; then
+  alias mi='micro'
+fi
+
 # Laravel
 alias art='php artisan'
 alias serve='php artisan serve --host 0.0.0.0'
