@@ -46,6 +46,13 @@ else
   alias la='ls -alh --time-style=long-iso --color=auto'
 fi
 
+# colordiff
+if type "colordiff" > /dev/null 2>&1; then
+  alias diff='colordiff -u'
+else
+  alias diff='diff -u'
+fi
+
 # Laravel
 alias art='php artisan'
 alias serve='php artisan serve --host 0.0.0.0'
