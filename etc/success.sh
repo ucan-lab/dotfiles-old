@@ -5,3 +5,6 @@ echo
 echo                    Success Complete !!!
 echo
 echo -------------------------------------------------
+
+# relogin
+exec $SHELL -l
