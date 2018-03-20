@@ -12,4 +12,5 @@ if type "npm" > /dev/null 2>&1; then
   fi
 
   npm config set prefix '~/.npm-global'
+  npm install npm --global
 fi
