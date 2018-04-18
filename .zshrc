@@ -76,12 +76,3 @@ fi
 if type "ccat" > /dev/null 2>&1; then
   alias cat='ccat'
 fi
-
-# Laravel
-alias art='php artisan'
-alias serve='php artisan serve --host 0.0.0.0'
-alias fresh='php artisan migrate:fresh --seed'
-alias migrate='php artisan migrate'
-alias seed='php artisan db:seed'
-alias tinker='php artisan tinker'
-alias test='vendor/bin/phpunit --colors=always'
