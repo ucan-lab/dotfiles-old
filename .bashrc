@@ -6,6 +6,9 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
+# Language
+export LANG=ja_JP.UTF-8
+
 # less
 if [[ -x `which source-highlight` ]]; then
   export LESS='-R'
@@ -20,6 +23,11 @@ fi
 # npm global path
 if [ -e $HOME/.npm-global/bin ]; then
   export PATH=$HOME/.npm-global/bin:$PATH
+fi
+
+# composer
+if [ -e $HOME/.composer/vendor/bin ]; then
+  export PATH=$HOME/.composer/vendor/bin:$PATH
 fi
 
 ##

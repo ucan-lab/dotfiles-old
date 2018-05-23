@@ -2,6 +2,9 @@
 # Executes commands at the start of an interactive session.
 #
 
+# Language
+export LANG=ja_JP.UTF-8
+
 # Show ssh username and hostname
 SSH_CONNECTION=1
 
@@ -32,6 +35,11 @@ fi
 # npm global path
 if [ -e $HOME/.npm-global/bin ]; then
   export PATH=$HOME/.npm-global/bin:$PATH
+fi
+
+# composer
+if [ -e $HOME/.composer/vendor/bin ]; then
+  export PATH=$HOME/.composer/vendor/bin:$PATH
 fi
 
 # zsh-completions
