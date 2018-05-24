@@ -65,3 +65,4 @@ fi
 if type "ccat" > /dev/null 2>&1; then
   alias cat='ccat'
 fi
+
