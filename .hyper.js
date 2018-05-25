@@ -9,7 +9,7 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 13,
 
     // font family with optional fallbacks
     fontFamily: '"Source Han Code JP", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -97,7 +97,7 @@ module.exports = {
     bell: 'SOUND',
 
     // if true, selected text will automatically be copied to the clipboard
-    copyOnSelect: false,
+    copyOnSelect: true,
 
     // if true, on right click selected text will be copied or pasted if no
     // selection is present (true by default on Windows)
@@ -107,11 +107,6 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
-    pokemon: 'random', // Define your favorite pokemon theme
-    pokecursor: 'true', // Activate your theme's pokecursor
-    pokemonSyntax: 'dark', // Define the color of the terminal tabs
-    unibody: 'false', // Define the color of the Hyper window header
-    poketab: 'true' // Deactivate your theme's poketab
   },
 
   // a list of plugins to fetch and install from npm
