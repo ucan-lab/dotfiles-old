@@ -85,3 +85,17 @@ if type "ccat" > /dev/null 2>&1; then
   alias cat='ccat'
 fi
 
+# function
+cdf() {
+  target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (targetof front Finder window as text)'`
+  if [ "$target" != "" ]; then
+    builtin cd "$target"; pwd
+  else
+    echo 'No Finder window found' >&2
+  fi
+}
+
+calc() {
+  [ $# -ge 1 ] && echo "scale=5; $1" | bc
+}
+
