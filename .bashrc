@@ -66,11 +66,15 @@ if type "ccat" > /dev/null 2>&1; then
   alias cat='ccat'
 fi
 
+# open current directory with Finder
+alias f='open -a Finder ./'
+
 # function
+# cd to the path of the front Finder window
 cdf() {
-  target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (targetof front Finder window as text)'`
+  target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`
   if [ "$target" != "" ]; then
-    builtin cd "$target"; pwd
+    cd "$target"; pwd
   else
     echo 'No Finder window found' >&2
   fi
