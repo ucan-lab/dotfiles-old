@@ -67,6 +67,18 @@ if type "ccat" > /dev/null 2>&1; then
 fi
 
 # open current directory with Finder
+alias f='open .'
+
+# ggrks
+alias g='ggrks'
+
+# open all markdown files in current directory
+alias md='vim ./*.md'
+
+# phpunit
+alias test='./vendor/bin/phpunit'
+
+# open current directory with Finder
 alias f='open -a Finder ./'
 
 # function
@@ -84,3 +96,28 @@ calc() {
   [ $# -ge 1 ] && echo "scale=5; $1" | bc
 }
 
+# google search
+ggrks() {
+  open "https://www.google.co.jp/search?q=$*";
+}
+
+## Hyper plugin - hyper-tab-icons-plus
+case "$TERM" in
+xterm*|rxvt*)
+    PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+    show_command_in_title_bar()
+    {
+        case "$BASH_COMMAND" in
+            *\033]0*)
+                ;;
+            *)
+                echo -ne "\033]0;${BASH_COMMAND} - ${PWD##*/}\007"
+                ;;
+        esac
+    }
+    trap show_command_in_title_bar DEBUG
+    ;;
+*)
+    ;;
+esac
+## Hyper plugin - hyper-tab-icons-plus
