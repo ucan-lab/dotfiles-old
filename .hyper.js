@@ -4,7 +4,7 @@
 
 module.exports = {
   config: {
-    opacity: 0.95,
+    opacity: 0.80,
     // choose either `'stable'` for receiving highly polished,
     // or `'canary'` for less polished but more frequent updates
     updateChannel: 'stable',
