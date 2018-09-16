@@ -13,7 +13,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-cucumber'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-vividchalk'
-" Plugin 'Lokaltog/vim-powerline' " ステータス表示
+Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdcommenter' " , で コメントイン/コメントアウト
 Plugin 'L9'
 Plugin 'FuzzyFinder'
@@ -121,3 +121,12 @@ set history=5000 " 保存するコマンド履歴の数
 
 " 自動コピー
 " set clipboard=unnamed,autoselect
+
+set laststatus=2 " ステータスラインを常に表示
+set showmode " 現在のモードを表示
+set showcmd " 打ったコマンドをステータスラインの下に表示
+set ruler " ステータスラインの右側にカーソルの現在位置を表示する
+let g:lightline = {
+  \ 'colorscheme': 'wombat',
+  \ }
+
