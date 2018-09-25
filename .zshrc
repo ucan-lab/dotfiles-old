@@ -2,6 +2,10 @@
 # Executes commands at the start of an interactive session.
 #
 
+# History
+HISTSIZE=50000
+HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
+
 # Language
 export LANG=ja_JP.UTF-8
 
