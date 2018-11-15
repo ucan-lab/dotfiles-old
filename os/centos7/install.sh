@@ -49,11 +49,11 @@ echo
 echo -------------------------------------------------
 
 if type "npm" > /dev/null 2>&1; then
-  if [ ! -e ~/.npm-global ]; then
-    mkdir ~/.npm-global
+  if [ ! -e ~/.npm ]; then
+    mkdir ~/.npm
   fi
 
-  npm config set prefix '~/.npm-global'
+  npm config set prefix '~/.npm'
   npm install npm --global
 fi
 
