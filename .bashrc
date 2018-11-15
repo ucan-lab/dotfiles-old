@@ -39,6 +39,7 @@ fi
 #
 
 alias ..='cd ..'
+alias j='z'
 alias mkdir='mkdir -p'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'

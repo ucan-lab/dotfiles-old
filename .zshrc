@@ -43,11 +43,6 @@ if [ -e $HOME/.composer/vendor/bin ]; then
   export PATH=$HOME/.composer/vendor/bin:$PATH
 fi
 
-# zsh-completions
-if [ -e /usr/local/share/zsh-completions ]; then
-  fpath=(/usr/local/share/zsh-completions $fpath)
-fi
-
 # knu/z
 . ~/dotfiles/z/z.sh
 
@@ -85,6 +80,9 @@ fi
 if type "ccat" > /dev/null 2>&1; then
   alias cat='ccat'
 fi
+
+# z command to j
+alias j='z'
 
 # open current directory with Finder
 alias f='open .'
