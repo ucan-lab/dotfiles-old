@@ -73,8 +73,6 @@ echo -------------------------------------------------
 
 if ! type "zsh" > /dev/null 2>&1; then
   sudo yum -y install zsh
-  sudo wget https://download.opensuse.org/repositories/shells:zsh-users:zsh-completions/CentOS_7/shells:zsh-users:zsh-completions.repo -P /etc/yum.repos.d
-  sudo yum -y install zsh-completions
 fi
 
 if type "zsh" > /dev/null 2>&1; then

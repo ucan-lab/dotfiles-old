@@ -74,7 +74,7 @@ echo
 echo -------------------------------------------------
 
 if ! type "zsh" > /dev/null 2>&1; then
-  brew install zsh zsh-completions
+  brew install zsh
 fi
 
 echo -------------------------------------------------
