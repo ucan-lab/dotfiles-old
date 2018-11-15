@@ -25,8 +25,8 @@ if type "nodebrew" > /dev/null 2>&1; then
 fi
 
 # npm global path
-if [ -e $HOME/.npm-global/bin ]; then
-  export PATH=$HOME/.npm-global/bin:$PATH
+if [ -e $HOME/.npm/bin ]; then
+  export PATH=$HOME/.npm/bin:$PATH
 fi
 
 # composer
