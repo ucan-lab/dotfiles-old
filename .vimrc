@@ -73,6 +73,12 @@ colorscheme iceberg
 set term=xterm-256color
 set noswapfile
 
+" 背景透明化
+highlight Normal ctermbg=NONE guibg=NONE
+highlight NonText ctermbg=NONE guibg=NONE
+highlight SpecialKey ctermbg=NONE guibg=NONE
+highlight EndOfBuffer ctermbg=NONE guibg=NONE
+
 set expandtab " タブ入力を複数の空白入力に置き換える
 set tabstop=4 " 画面上でタブ文字が占める幅
 set softtabstop=4 " 連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
