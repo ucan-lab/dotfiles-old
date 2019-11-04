@@ -2,6 +2,9 @@
 # Executes commands at the start of an interactive session.
 #
 
+# zsh option
+setopt RM_STAR_SILENT
+
 # History
 HISTSIZE=50000
 HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
@@ -17,10 +20,21 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   . "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
-if [ -f ~/.zsh_aliases ]; then
-  . ~/.zsh_aliases
+if [ -f ~/.alias ]; then
+  . ~/.alias
 fi
+
+if [ -f ~/.function ]; then
+  . ~/.function
+fi
+
+# if [ -f ~/.fzf.zsh ]; then
+#   . ~/.fzf.zsh
+# fi
+
+# if [ -f ~/dotfiles/z/z.sh ]; then
+#   . ~/dotfiles/z/z.sh
+# fi
 
 # less
 if type "source-highlight" > /dev/null 2>&1; then
@@ -38,78 +52,26 @@ if [ -e $HOME/.composer/vendor/bin ]; then
   export PATH=$HOME/.composer/vendor/bin:$PATH
 fi
 
-# knu/z
-. ~/dotfiles/z/z.sh
+# google cloud sdk
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
-##
-# alias
-#
-
-alias mkdir='mkdir -p'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias relogin='exec $SHELL -l'
-
-if [[ $(uname) == 'Darwin' ]]; then
-  alias ll='ls  -lhGT'
-  alias la='ls -alhGT'
-else
-  alias ll='ls  -lh --time-style=long-iso --color=auto'
-  alias la='ls -alh --time-style=long-iso --color=auto'
+if [ -e $HOME/google-cloud-sdk/bin ]; then
+  export PATH=$HOME/google-cloud-sdk/bin:$PATH
 fi
 
-# colordiff
-if type "colordiff" > /dev/null 2>&1; then
-  alias diff='colordiff -u'
-else
-  alias diff='diff -u'
+if [ -e /Applications/MAMP/bin/php/php7.3.1/bin ]; then
+  export PATH=/Applications/MAMP/bin/php/php7.3.1/bin:$PATH
 fi
 
-# micro
-if type "micro" > /dev/null 2>&1; then
-  alias mi='micro'
+if [ -e /Applications/MAMP/Library/bin ]; then
+  export PATH=/Applications/MAMP/Library/bin:$PATH
 fi
 
-# ccat
-if type "ccat" > /dev/null 2>&1; then
-  alias cat='ccat'
+# rust
+if [ -e /Applications/MAMP/Library/bin ]; then
+  export PATH=$HOME/.cargo/bin:$PATH
 fi
-
-# z command to j
-alias j='z'
-
-# open current directory with Finder
-alias f='open .'
-
-# ggrks
-alias g='ggrks'
-
-# open all markdown files in current directory
-alias md='vim ./*.md'
-
-# phpunit
-alias test='./vendor/bin/phpunit'
-
-# function
-# cd to the path of the front Finder window
-cdf() {
-  target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`
-  if [ "$target" != "" ]; then
-    cd "$target"; pwd
-  else
-    echo 'No Finder window found' >&2
-  fi
-}
-
-calc() {
-  [ $# -ge 1 ] && echo "scale=5; $1" | bc
-}
-
-# google search
-ggrks() {
-  open "https://www.google.co.jp/search?q=$*";
-}
 
 ## Hyper plugin - hyper-tab-icons-plus
 

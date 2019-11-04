@@ -1,0 +1,78 @@
+alias ..='cd ..'
+alias j='z'
+alias mkdir='mkdir -p'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias relogin='exec $SHELL -l'
+
+if [[ $(uname) == 'Darwin' ]]; then
+  alias ll='ls  -lhGT'
+  alias la='ls -alhGT'
+else
+  alias ll='ls  -lh --time-style=long-iso --color=auto'
+  alias la='ls -alh --time-style=long-iso --color=auto'
+fi
+
+# colordiff
+if type "colordiff" > /dev/null 2>&1; then
+  alias diff='colordiff -u'
+else
+  alias diff='diff -u'
+fi
+
+# micro
+if type "micro" > /dev/null 2>&1; then
+  alias mi='micro'
+fi
+
+# ccat
+if type "ccat" > /dev/null 2>&1; then
+  alias cat='ccat'
+fi
+
+# open current directory with Finder
+alias f='open .'
+
+# ggrks
+alias g='ggrks'
+
+# open all markdown files in current directory
+alias md='vim ./*.md'
+
+# phpunit
+alias test='./vendor/bin/phpunit'
+
+# docker
+alias dps='docker ps'
+alias dim='docker images'
+alias drm='docker rm $(docker ps -aqf "status=exited") 2> /dev/null'
+alias drmi='docker rmi $(docker images -aqf "dangling=true") 2> /dev/null'
+alias dc='docker-compose'
+alias dcrun='dc run --service-ports'
+function dcrm() {
+    dc stop $1 && dc rm -f $1
+}
+
+# open current directory with Finder
+alias f='open -a Finder ./'
+
+# git
+alias gss='git status'
+alias gbr='git branch'
+alias gbrm='git branch -m'
+alias gbrd='git branch -d'
+alias gbrdd='git branch -D'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gadu='git add -u'
+alias gadup='git add -u -p'
+alias gcom='git commit'
+alias gmg='git merge --no-ff'
+alias gmgff='git merge --ff'
+alias gcp='git cherry-pick'
+alias glog1='git log -1'
+alias glog2='git log -2'
+alias glog3='git log -3'
+alias glogo='git log --oneline'
+alias glogn='git log --name-status --oneline'
