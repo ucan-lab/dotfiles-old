@@ -73,6 +73,12 @@ if [ -e /Applications/MAMP/Library/bin ]; then
   export PATH=$HOME/.cargo/bin:$PATH
 fi
 
+# Google Cloud
+## The next line updates PATH for the Google Cloud SDK.
+if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
+## The next line enables shell command completion for gcloud.
+if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
+
 ## Hyper plugin - hyper-tab-icons-plus
 
 # Override auto-title when static titles are desired ($ title My new title)
@@ -101,5 +107,3 @@ tabtitle_preexec() {
 }
 [[ -z $preexec_functions ]] && preexec_functions=()
 preexec_functions=($preexec_functions tabtitle_preexec)
-
-## Hyper plugin - hyper-tab-icons-plus
