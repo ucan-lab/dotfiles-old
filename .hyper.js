@@ -4,7 +4,7 @@
 
 module.exports = {
   config: {
-    opacity: 0.80,
+    scrollback: 100000,
     // choose either `'stable'` for receiving highly polished,
     // or `'canary'` for less polished but more frequent updates
     updateChannel: 'stable',
@@ -111,7 +111,7 @@ module.exports = {
     bell: 'SOUND',
 
     // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
-    copyOnSelect: true,
+    copyOnSelect: false,
 
     // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
     defaultSSHApp: true,
@@ -133,13 +133,11 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    'hyperterm-material',
-    'hyper-statusline',
-    'hyper-search',
-    'hypercwd',
-    'hyper-pane',
-    'hyper-opacity',
-    'hyper-tab-icons-plus'
+    "hyperterm-material",
+    "hyper-statusline",
+    "hypercwd",
+    "hyper-pane",
+    "hyper-tab-icons-plus"
   ],
 
   // in development, you can create a directory under
