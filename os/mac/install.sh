@@ -4,6 +4,17 @@ cd `dirname $0`
 
 echo -------------------------------------------------
 echo
+echo                    xcode-select
+echo
+echo -------------------------------------------------
+
+if ! type "xcode-select" > /dev/null 2>&1; then
+  echo "xcode-select install"
+  xcode-select --install
+fi
+
+echo -------------------------------------------------
+echo
 echo                    homebrew
 echo
 echo -------------------------------------------------
@@ -46,17 +57,13 @@ fi
 
 echo -------------------------------------------------
 echo
-echo                    npm
+echo                    nodenv
 echo
 echo -------------------------------------------------
 
-if type "npm" > /dev/null 2>&1; then
-  if [ ! -e ~/.npm ]; then
-    mkdir ~/.npm
-  fi
-
-  npm config set prefix '~/.npm'
-  npm install npm --global
+if ! type "nodenv" > /dev/null 2>&1; then
+  brew install nodenv
+  eval "$(nodenv init -)"
 fi
 
 echo -------------------------------------------------
