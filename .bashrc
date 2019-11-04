@@ -19,14 +19,9 @@ if [[ -x `which source-highlight` ]]; then
   export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 fi
 
-# nodebrew
-if type "nodebrew" > /dev/null 2>&1; then
-  export PATH=$HOME/.nodebrew/current/bin:$PATH
-fi
-
-# npm global path
-if [ -e $HOME/.npm/bin ]; then
-  export PATH=$HOME/.npm/bin:$PATH
+# nodenv
+if type "nodenv" > /dev/null 2>&1; then
+  eval "$(nodenv init -)"
 fi
 
 # composer
