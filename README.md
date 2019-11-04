@@ -13,3 +13,11 @@ $ chsh -s `which zsh`
 $ echo `which zsh` | sudo tee -a /etc/shells
 ```
 
+## nodenv
+
+```
+$ nodenv install -h # インストール可能なバージョン一覧
+$ nodenv install 13.0.1
+$ nodenv global 13.0.1
+$ node -v
+```
