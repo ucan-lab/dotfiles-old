@@ -9,7 +9,6 @@ echo
 echo -------------------------------------------------
 
 if ! type "xcode-select" > /dev/null 2>&1; then
-  echo "xcode-select install"
   xcode-select --install
 fi
 
@@ -20,7 +19,6 @@ echo
 echo -------------------------------------------------
 
 if ! type "brew" > /dev/null 2>&1; then
-  echo "homebrew install"
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
