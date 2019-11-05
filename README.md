@@ -7,6 +7,12 @@ $ git clone https://github.com/ucan-lab/dotfiles.git ~/dotfiles && cd ~/dotfiles
 
 # tips
 
+## brew cask install
+
+```
+./brew-cask-install.sh
+```
+
 ## nodenv
 
 ```
