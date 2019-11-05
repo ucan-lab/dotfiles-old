@@ -39,8 +39,7 @@ echo                    grc
 echo
 echo -------------------------------------------------
 
-if ! type "grc" > /dev/null 2>&1
-then
+if ! type "grc" > /dev/null 2>&1; then
   brew install grc
 fi
 
@@ -77,14 +76,6 @@ fi
 
 echo -------------------------------------------------
 echo
-echo                    dotfiles
-echo
-echo -------------------------------------------------
-
-. ~/dotfiles/os/common/dotfiles.sh
-
-echo -------------------------------------------------
-echo
 echo                    tmux
 echo
 echo -------------------------------------------------
@@ -113,6 +104,14 @@ echo -------------------------------------------------
 if ! type "nodenv" > /dev/null 2>&1; then
   brew install nodenv
 fi
+
+echo -------------------------------------------------
+echo
+echo                    dotfiles
+echo
+echo -------------------------------------------------
+
+. ~/dotfiles/os/common/dotfiles.sh
 
 echo -------------------------------------------------
 echo
