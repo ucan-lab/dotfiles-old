@@ -40,9 +40,6 @@ alias g='ggrks'
 # open all markdown files in current directory
 alias md='vim ./*.md'
 
-# phpunit
-alias test='./vendor/bin/phpunit'
-
 # docker
 alias dps='docker ps'
 alias dim='docker images'
