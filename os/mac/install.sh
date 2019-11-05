@@ -26,6 +26,15 @@ fi
 
 echo -------------------------------------------------
 echo
+echo                    homebrew upgrade and update
+echo
+echo -------------------------------------------------
+
+brew upgrade
+brew update
+
+echo -------------------------------------------------
+echo
 echo                    grc
 echo
 echo -------------------------------------------------
@@ -76,12 +85,33 @@ echo -------------------------------------------------
 
 echo -------------------------------------------------
 echo
-echo                    zsh
+echo                    tmux
 echo
 echo -------------------------------------------------
 
-if ! type "zsh" > /dev/null 2>&1; then
-  brew install zsh
+if ! type "tmux" > /dev/null 2>&1; then
+  brew install tmux reattach-to-user-namespace
+fi
+
+echo -------------------------------------------------
+echo
+echo                    fzf
+echo
+echo -------------------------------------------------
+
+if ! type "fzf" > /dev/null 2>&1; then
+  brew install fzf
+  $(brew --prefix)/opt/fzf/install
+fi
+
+echo -------------------------------------------------
+echo
+echo                    nodenv
+echo
+echo -------------------------------------------------
+
+if ! type "nodenv" > /dev/null 2>&1; then
+  brew install nodenv
 fi
 
 echo -------------------------------------------------
