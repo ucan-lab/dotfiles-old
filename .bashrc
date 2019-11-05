@@ -33,6 +33,9 @@ HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
 # Language
 export LANG=ja_JP.UTF-8
 
+# "The default interactive shell is now zsh." message suppression.
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # less
 if [[ -x `which source-highlight` ]]; then
   export LESS='-R'
