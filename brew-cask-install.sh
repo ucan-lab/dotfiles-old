@@ -1,13 +1,5 @@
 echo -------------------------------------------------
 echo
-echo                    brew cask install
-echo
-echo -------------------------------------------------
-
-brew install caskroom/cask/brew-cask
-
-echo -------------------------------------------------
-echo
 echo                    Visual Studio Code
 echo
 echo -------------------------------------------------
