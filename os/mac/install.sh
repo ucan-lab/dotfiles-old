@@ -4,16 +4,6 @@ cd `dirname $0`
 
 echo -------------------------------------------------
 echo
-echo                    xcode-select
-echo
-echo -------------------------------------------------
-
-if ! type "xcode-select" > /dev/null 2>&1; then
-  xcode-select --install
-fi
-
-echo -------------------------------------------------
-echo
 echo                    homebrew
 echo
 echo -------------------------------------------------
