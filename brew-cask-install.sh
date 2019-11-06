@@ -28,6 +28,7 @@ echo                    font-source-han-code-jp
 echo
 echo -------------------------------------------------
 
+brew tap caskroom/fonts
 brew cask install font-source-han-code-jp
 
 echo -------------------------------------------------

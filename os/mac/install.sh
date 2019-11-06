@@ -24,12 +24,12 @@ fi
 
 echo -------------------------------------------------
 echo
-echo                    homebrew upgrade and update
+echo                    homebrew update and upgrade
 echo
 echo -------------------------------------------------
 
-brew upgrade
 brew update
+brew upgrade
 
 echo -------------------------------------------------
 echo
