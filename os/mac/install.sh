@@ -23,6 +23,14 @@ brew upgrade
 
 echo -------------------------------------------------
 echo
+echo                    git
+echo
+echo -------------------------------------------------
+
+brew install git
+
+echo -------------------------------------------------
+echo
 echo                    grc
 echo
 echo -------------------------------------------------
@@ -53,11 +61,13 @@ fi
 
 echo -------------------------------------------------
 echo
-echo                    bash-completion
+echo                    bash-completion, git-prompt.sh
 echo
 echo -------------------------------------------------
 
 brew install bash-completion
+curl -o $(brew --prefix)/etc/bash_completion.d/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+curl -o $(brew --prefix)/etc/bash_completion.d/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 
 echo -------------------------------------------------
 echo

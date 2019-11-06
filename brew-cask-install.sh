@@ -20,7 +20,7 @@ echo                    font-source-han-code-jp
 echo
 echo -------------------------------------------------
 
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 brew cask install font-source-han-code-jp
 
 echo -------------------------------------------------
@@ -53,7 +53,7 @@ echo                    sequel-pro-nightly
 echo
 echo -------------------------------------------------
 
-brew cask install sequel-pro-nightly
+brew cask install homebrew/cask-versions/sequel-pro-nightly
 
 echo -------------------------------------------------
 echo

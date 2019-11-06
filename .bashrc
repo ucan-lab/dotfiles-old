@@ -47,6 +47,11 @@ if type "nodenv" > /dev/null 2>&1; then
   eval "$(nodenv init -)"
 fi
 
+# homebrew
+if [ -e $(brew --prefix)/bin ]; then
+  export PATH=$(brew --prefix)/bin:$PATH
+fi
+
 # composer
 if [ -e $HOME/.composer/vendor/bin ]; then
   export PATH=$HOME/.composer/vendor/bin:$PATH
