@@ -31,6 +31,7 @@ HISTSIZE=50000
 HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
 
 # Language
+export LC_ALL=ja_JP.UTF-8
 export LANG=ja_JP.UTF-8
 
 # "The default interactive shell is now zsh." message suppression.
