@@ -128,7 +128,7 @@ set history=5000 " 保存するコマンド履歴の数
 " 自動コピー
 " set clipboard=unnamed,autoselect
 
-"" itchyny/lightline.vim 
+"" itchyny/lightline.vim
 set laststatus=2 " ステータスラインを常に表示
 set showmode " 現在のモードを表示
 set showcmd " 打ったコマンドをステータスラインの下に表示
@@ -137,3 +137,5 @@ let g:lightline = {
   \ 'colorscheme': 'wombat',
   \ }
 
+" fzf
+set rtp+=/usr/local/opt/fzf

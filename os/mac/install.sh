@@ -31,6 +31,22 @@ brew install git
 
 echo -------------------------------------------------
 echo
+echo                    bat
+echo
+echo -------------------------------------------------
+
+brew install bat
+
+echo -------------------------------------------------
+echo
+echo                    ripgrep
+echo
+echo -------------------------------------------------
+
+brew install ripgrep
+
+echo -------------------------------------------------
+echo
 echo                    grc
 echo
 echo -------------------------------------------------
@@ -92,17 +108,6 @@ fi
 
 echo -------------------------------------------------
 echo
-echo                    fzf
-echo
-echo -------------------------------------------------
-
-if ! type "fzf" > /dev/null 2>&1; then
-  brew install fzf
-  $(brew --prefix)/opt/fzf/install
-fi
-
-echo -------------------------------------------------
-echo
 echo                    nodenv
 echo
 echo -------------------------------------------------
@@ -127,6 +132,17 @@ echo -------------------------------------------------
 
 if ! type "vim" > /dev/null 2>&1; then
   brew install vim
+fi
+
+echo -------------------------------------------------
+echo
+echo                    fzf
+echo
+echo -------------------------------------------------
+
+if ! type "fzf" > /dev/null 2>&1; then
+  brew install fzf
+  $(brew --prefix)/opt/fzf/install
 fi
 
 echo -------------------------------------------------
