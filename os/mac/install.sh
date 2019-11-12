@@ -44,6 +44,16 @@ git config --global interactive.diffFilter "(diff-highlight 2>/dev/null || cat)"
 
 echo -------------------------------------------------
 echo
+echo                    diff-highlight
+echo
+echo -------------------------------------------------
+
+if [ -f /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ]; then
+  ln -sfn /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ~/dotfiles/bin/diff-highlight
+fi
+
+echo -------------------------------------------------
+echo
 echo                    bat
 echo
 echo -------------------------------------------------

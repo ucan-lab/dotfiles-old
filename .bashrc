@@ -66,6 +66,11 @@ if [ -e $HOME/.cargo/bin ]; then
   export PATH=$HOME/.cargo/bin:$PATH
 fi
 
+# dotfiles/bin
+if [ -e $HOME/dotfiles/bin ]; then
+  export PATH=$HOME/dotfiles/bin:$PATH
+fi
+
 # Google Cloud
 ## The next line updates PATH for the Google Cloud SDK.
 if [ -f '~/google-cloud-sdk/path.bash.inc' ]; then . '~/google-cloud-sdk/path.bash.inc'; fi
