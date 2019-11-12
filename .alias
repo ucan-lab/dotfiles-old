@@ -7,10 +7,12 @@ alias egrep='egrep --color=auto'
 alias relogin='exec $SHELL -l'
 
 if [[ $(uname) == 'Darwin' ]]; then
-  alias ll='ls  -lhGT'
+  alias ls='ls -G'
+  alias ll='ls -lhGT'
   alias la='ls -alhGT'
 else
-  alias ll='ls  -lh --time-style=long-iso --color=auto'
+  alias ls='ls --color=auto'
+  alias ll='ls -lh --time-style=long-iso --color=auto'
   alias la='ls -alh --time-style=long-iso --color=auto'
 fi
 
