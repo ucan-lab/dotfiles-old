@@ -96,3 +96,8 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+
+# tmux 自動起動
+if [ $SHLVL = 1 ]; then
+  tmux
+fi
