@@ -8,12 +8,12 @@ fi
 
 GIT_PS1_SHOWDIRTYSTATE=true
 
-_BLUE="\[$(tput setaf 4)\]"
+_CYAN="\[$(tput setaf 6)\]"
 _GREEN="\[$(tput setaf 2)\]"
 _YELLOW="\[$(tput setaf 3)\]"
 _RESET="\[$(tput sgr0)\]"
 
 export GIT_PS1_SHOWUPSTREAM=1
 export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1="${_BLUE}\w${_GREEN}\$(__git_ps1 ' %s')${_RESET} ${_YELLOW}\u@\h${_RESET} [\t]\n\$ "
-unset _BLUE _GREEN _YELLOW _RESET
+export PS1="${_CYAN}\w${_GREEN}\$(__git_ps1 ' %s')${_RESET} ${_YELLOW}\u@\h${_RESET} [\t]\n\$ "
+unset _CYAN _GREEN _YELLOW _RESET
