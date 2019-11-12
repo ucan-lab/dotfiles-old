@@ -34,6 +34,9 @@ HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
 export LC_ALL=ja_JP.UTF-8
 export LANG=ja_JP.UTF-8
 
+# Color
+export LSCOLORS=gxfxcxdxbxegexabagacad
+
 # "The default interactive shell is now zsh." message suppression.
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
