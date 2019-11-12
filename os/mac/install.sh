@@ -29,6 +29,19 @@ echo -------------------------------------------------
 
 brew install git
 
+git config --global diff.compactionHeuristic true
+git config --global core.filemode false # パーミッションの変更を無視する
+git config --global core.ignorecase false # ファイル名の大文字・小文字の変更を検知する
+git config --global core.quotepath false # 日本語ファイル名をエスケープせずに表示
+git config --global color.ui true # カラー設定
+git config --global color.diff auto # カラー設定
+git config --global color.status auto # カラー設定
+git config --global color.branch auto # カラー設定
+git config --global pager.log "(diff-highlight 2>/dev/null || cat) | ${PAGER:-less}"
+git config --global pager.show "(diff-highlight 2>/dev/null || cat) | ${PAGER:-less}"
+git config --global pager.diff "(diff-highlight 2>/dev/null || cat) | ${PAGER:-less}"
+git config --global interactive.diffFilter "(diff-highlight 2>/dev/null || cat)"
+
 echo -------------------------------------------------
 echo
 echo                    bat
