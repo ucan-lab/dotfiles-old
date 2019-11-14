@@ -49,6 +49,7 @@ fi
 # nodenv
 if type "nodenv" > /dev/null 2>&1; then
   eval "$(nodenv init -)"
+  export PATH=$HOME/.npm/bin:$PATH
 fi
 
 # homebrew
