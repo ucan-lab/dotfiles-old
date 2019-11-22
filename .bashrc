@@ -98,7 +98,19 @@ xterm*|rxvt*)
     ;;
 esac
 
-# tmux 自動起動
-if [ $SHLVL = 1 ]; then
-  tmux
+# tmux auto start
+if [[ ! -n $TMUX ]]; then
+  if [[ -z `tmux list-sessions` ]]; then
+    tmux new-session
+  fi
+
+  create_new_session="CreateNewSession"
+  ID=$((echo $create_new_session && tmux list-sessions -F "#{session_name} #{window_index} #{window_panes} #{pane_current_path}") | fzf --query="$1" --select-1 --exit-0 | awk '{ print $1 }')
+  if [[ "$ID" = "${create_new_session}" ]]; then
+    tmux new-session
+  elif [[ -n "$ID" ]]; then
+    tmux attach-session -t "$ID"
+  else
+    : # Start terminal normally
+  fi
 fi
