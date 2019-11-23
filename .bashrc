@@ -31,8 +31,9 @@ if [ -f ~/dotfiles/z/z.sh ]; then
 fi
 
 # History
-HISTSIZE=50000
-HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
+export HISTFILESIZE=50000
+export HISTSIZE=${HISTFILESIZE}
+export HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
 
 # Language
 export LC_ALL=ja_JP.UTF-8
