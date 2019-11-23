@@ -29,8 +29,8 @@ echo -------------------------------------------------
 
 brew install git
 
+# ~/.gitconfig
 git config --global diff.compactionHeuristic true
-git config --global core.filemode false # パーミッションの変更を無視する
 git config --global core.ignorecase false # ファイル名の大文字・小文字の変更を検知する
 git config --global core.quotepath false # 日本語ファイル名をエスケープせずに表示
 git config --global color.ui true # カラー設定
@@ -166,6 +166,16 @@ echo -------------------------------------------------
 if ! type "fzf" > /dev/null 2>&1; then
   brew install fzf
   $(brew --prefix)/opt/fzf/install
+fi
+
+echo -------------------------------------------------
+echo
+echo                    hstr
+echo
+echo -------------------------------------------------
+
+if ! type "hstr" > /dev/null 2>&1; then
+  brew install hstr
 fi
 
 echo -------------------------------------------------

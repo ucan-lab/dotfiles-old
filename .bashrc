@@ -22,6 +22,10 @@ if [ -f ~/.fzf.bash ]; then
   . ~/.fzf.bash
 fi
 
+if [ -f ~/.hstr ]; then
+  . ~/.hstr
+fi
+
 if [ -f ~/dotfiles/z/z.sh ]; then
   . ~/dotfiles/z/z.sh
 fi
