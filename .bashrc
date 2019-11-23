@@ -22,6 +22,10 @@ if [ -f ~/.fzf.bash ]; then
   . ~/.fzf.bash
 fi
 
+if [ -f ~/.enhancd/init.sh ]; then
+  . ~/.enhancd/init.sh
+fi
+
 if [ -f ~/.hstr ]; then
   . ~/.hstr
 fi
