@@ -51,7 +51,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # less
 if [[ -x `which source-highlight` ]]; then
-  export LESS='-R'
+  export LESS='-g -i -M -R -S -W -z-4 -x4'
   export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 fi
 
