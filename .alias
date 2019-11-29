@@ -141,6 +141,11 @@ alias gstp="git stash pop"
 alias gh='cd "$(git rev-parse --show-toplevel)"'
 # Show untracked files
 alias gu='git ls-files . --exclude-standard --others'
+# Delete merged local branch
+alias git-delete-merged-local-branch="git branch --merged|egrep -v '\*|development|master'|xargs git branch -d"
+
+# lazygit
+alias lg='lazygit'
 
 case $OSTYPE in
   darwin*)

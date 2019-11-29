@@ -44,6 +44,14 @@ git config --global interactive.diffFilter "(diff-highlight 2>/dev/null || cat)"
 
 echo -------------------------------------------------
 echo
+echo                    lazygit
+echo
+echo -------------------------------------------------
+
+brew install jesseduffield/lazygit/lazygit
+
+echo -------------------------------------------------
+echo
 echo                    diff-highlight
 echo
 echo -------------------------------------------------
